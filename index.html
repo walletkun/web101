@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Save Energy</title>
+  <link rel="icon" href="images/energy_saving_nobg.png" type="image/x-icon">
+  <link rel="shortcut icon" href="images/energy_saving_nobg.png" type="image/x-icon">
+  <link href="reset.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    integrity="sha512-yxwl8bBSKqQ6C1fDOCTAvMJNDIc8ZSZ1Gp7tVl3nKmJlTbXqjkRruZYL4ttmJNiNnMRUEh7GNpYinZaxK9/hjA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <link href="reset-webview.css" rel="stylesheet" type="text/css">
+  <script src="script.js"></script>
+</head>
+
+<body>
+  <!-- Header Section -->
+  <div class="header-container">
+    <div class="logo">
+      <img src=".local/Images/energy_saving_nobg.png" class="logo" id="icon">
+    </div>
+    <!-- Navigation Bar -->
+    <div class="navbar">
+      <ul>
+        <li><a href="#" id="home">Home</a></li>
+        <li><a href="#" id="video">Video</a></li>
+        <li><a href="#" id="news">News</a></li>
+        <li><button id="theme-button"><i class="fas fa-moon"></i> Dark Mode</button></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Description Section -->
+  <div class="description">
+    <div class="description-text">
+      <p>Saving Energy</p>
+      <p>equals</p>
+      <p>Saving Money</p>
+      <div class="description-image">
+        <div class=button-container>
+          <!-- First saving electricity button -->
+          <button class="saving-button" id="button1">Save</button>
+          <!-- Second saving electricity button -->
+          <button class="saving-button" id="button2">Energy</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="details">
+    <div class="title">
+      <h4>What are energy saving?</h4>
+    </div>
+    <div class="content">
+      <p>
+        Energy saving refers to the conscious effort and practices employed to reduce the consumption of energy
+        resources while maintaining desired levels of productivity and comfort. It involves adopting various strategies
+        and technologies aimed at minimizing energy wastage and optimizing efficiency across different sectors,
+        including residential, commercial, and industrial. Energy-saving initiatives can range from simple behavioral
+        changes, such as turning off lights when not in use, to implementing advanced technologies like energy-efficient
+        appliances, LED lighting, and renewable energy systems. By reducing energy consumption, individuals, businesses,
+        and communities can not only lower their utility bills but also contribute to environmental sustainability by
+        decreasing greenhouse gas emissions and mitigating the impacts of climate change.
+      </p>
+    </div>
+  </div>
+
+  <div class="container">
+    <h6>
+      Energy Saving Tips
+    </h6>
+    <h4>
+      7 Ways to Save Energy
+    </h4>
+    <iframe class="video" id="video-section" src="https://www.youtube.com/embed/2Y0PrfVvkX0" frameborder="0"
+      allowfullscreen>
+    </iframe>
+  </div>
+
+
+
+  <!---News Section -->
+  <div class="news">
+    <h3>
+      News Articles that supports our sayings:
+    </h3>
+    <a id="news-section" class="articles" href="https://www.aceee.org/sites/default/files/ee-improves-environment.pdf">
+      <article>
+        <h4>
+          Saving Energy Improves Americans’ Health and the Environment
+        </h4>
+      </article>
+    </a>
+    <p>
+      Below are the graphs of families that are not awared of energy savings:
+    </p>
+  </div>
+
+  <!-- Slideshow container -->
+  <div class="slideshow-container">
+
+    <!-- Full-width images with number and caption text -->
+    <div class="image">
+      <img src="images/Figure2.webp" style="width: 100%">
+      <div class="text">Testing1</div>
+    </div>
+
+    <div class="image">
+      <img src="images/News_LocationEfficiency_Apr2011.jpg" style="width: 100%">
+      <div class="text">
+        Testing2
+      </div>
+    </div>
+
+    <div class="image">
+      <img src="images/Residential-Energy-Usage-pie-graph.png" style="width: 100%">
+      <div class="text">
+        Testing3
+      </div>
+    </div>
+    <!-- Next and previous buttons -->
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+  </div>
+
+  <br>
+  <!-- The dots/circles -->
+  <div style="text-align:center">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+  </div>
+
+
+  <!--Petition form--->
+  <div class="petition" id="petition">
+    <h2>Sign Our Petition 📢</h2>
+    <div class="petition-container">
+      <div class="petition-para">
+        Saving energy is essential for preserving our environment and ensuring a sustainable future. By adopting
+        energy-saving practices and advocating for policies that promote efficiency, we can reduce our carbon
+        footprint
+        and mitigate the impacts of climate change. Signing this petition signifies your commitment to environmental
+        responsibility and supports efforts to create a greener, more sustainable world for generations to come. Join
+        us
+        in making a difference today.
+      </div>
+      <div class="signatures">
+        <p>🖊️ Johnny from Brooklyn supports this.</p>
+        <p>🖊️ Andy from Queens supports this.</p>
+        <p>🖊️ Jacky from Harlem supports this.</p>
+      </div>
+    </div>
+
+    <!--- Sign Petition Form --->
+    <form id="sign-petition" title="sign-petition">
+      <!-- inputs go here -->
+    </form>
+
+    <!--- Sign Now Button --->
+    <button id="sign-now-button">Sign Now</button>
+
+  </div>
+
+</body>
+
+</html>

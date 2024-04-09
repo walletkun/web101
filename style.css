@@ -1,0 +1,401 @@
+:root {
+  --navbar-bg-light: #E8E8E8;
+  /* Light mode navbar background color */
+  --navbar-color-light: #000;
+  /* Light mode navbar text color */
+  --navbar-bg-dark: #000;
+  /* Dark mode navbar background color */
+  --navbar-color-dark: #fff;
+  /* Dark mode navbar text color */
+}
+
+body {
+  transition: all .5s ease-out;
+  transform: none;
+  height: 100%;
+  width: 100%;
+  text-rendering: optimizeLegibility;
+  color: #000;
+  background-color: #FFFF;
+}
+
+/* Part 1: Navbar */
+
+/* General style rule set for all items in ul */
+.navbar ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+
+}
+
+/* Style rule set for individual li */
+.navbar ul li {
+  margin: 10px;
+  /* Adjust margin between list items */
+}
+
+
+/* Style rule set for individual li link */
+.navbar ul li a {
+  font-family: Graphik, Arial, sans-serif;
+  color: inherit;
+  font-size: 16px;
+  text-decoration: none;
+  transition: color 0.5s;
+}
+
+/* Style rule set for hovered link */
+.navbar ul li a:hover {
+  font-weight: bold;
+}
+
+#theme-button {
+  font-family: Graphik, Arial, sans-serif;
+  padding: 3% 12px;
+  font-weight: bold;
+  border-radius: 20px;
+  background: linear-gradient(to right, #fff, #000);
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s, box-shadow 0.3s transform 0.3s;
+}
+
+#theme-button i {
+  padding-bottom: 2em;
+  margin-bottom: 10px;
+  margin-right: 5px;
+  /* Adjust icon spacing */
+}
+
+#theme-button:active {
+  transform: translateY(2px);
+  /* Apply a slight downward movement when button is pressed */
+}
+
+.header-container {
+  background-color: var(--navbar-bg-light);
+  color: var(--navbar-bg-dark);
+  height: 50px;
+  padding-bottom: 10px;
+  display: flex;
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  position: sticky;
+  z-index: 1000;
+  top: 0;
+  transition: background-color 0.5s, color 0.5s;
+}
+
+.logo {
+  width: 75px;
+  padding: 2px;
+  cursor: pointer;
+  align-items: center;
+}
+
+.description {
+  flex-direction: column;
+  padding-top: 5%;
+  padding-bottom: 8em;
+  margin-bottom: -0.9em;
+  background-image: url(".local/Images/background_energy.jpg");
+  background-size: 120rem 120%;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+/* Style for button container */
+.button-container {
+  position: absolute;
+  margin-top: 0.3em;
+  margin-left: 0.3em;
+  text-align: center;
+}
+
+.saving-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #FFF;
+  color: #000;
+  border: 5px;
+  cursor: pointer;
+  border-radius: 20px;
+  margin: 10px;
+  transition: background-color 0.5s, color 0.5s;
+}
+
+.description p {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  text-align: left;
+  color: #fff;
+  font-family: Graphik, Arial, sans-serif;
+  font-weight: 700;
+  padding-top: .5em;
+  padding-left: .4em;
+  font-size: 2em;
+}
+
+
+.details {
+  margin-top: 10px;
+  margin-bottom: 0;
+  padding-bottom: 1em;
+  display: block;
+  transition: background-color 0.5s, color 0.5s;
+}
+
+
+.title h4 {
+  margin-top: 3em;
+  font-family: Graphik, Arial, sans-serif;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 700;
+}
+
+.content p {
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 30%;
+  padding-right: 30%;
+  margin-bottom: 3em;
+  font-family: Graphik, Arial, sans-serif;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: 100;
+  letter-spacing: 0;
+  overflow-wrap: break-word;
+}
+
+
+.container {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 2em;
+  background-color: #f3f3f3;
+  transition: background-color 0.5s, color 0.5s;
+}
+
+.container h6 {
+  margin-top: 1em;
+  margin-left: 10px;
+  margin-bottom: 0.01em;
+  font-family: Graphik, Arial, sans-serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.container h4 {
+  margin-left: 10px;
+  font-family: Graphik, Arial, sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.video {
+  display: flex;
+  margin: 0 auto;
+  width: 70%;
+  height: 40em;
+}
+
+
+.news {
+  font-family: Graphik, Arial, sans-serif;
+  padding-left: 4px;
+  margin-bottom: 10px;
+  padding-bottom: .2em;
+  display: flex;
+  flex-direction: column;
+  transition: background-color 0.5s, color 0.5s;
+}
+
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+.i .image {
+  display: none;
+}
+
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  opacity: 1;
+}
+
+@keyframes fade {
+  from {
+    opacity: .4
+  }
+
+  to {
+    opacity: 1
+  }
+}
+
+
+
+.petition {
+  padding-left: 3px;
+}
+
+.petition-container {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  width: 100;
+  padding-bottom: 50px;
+}
+
+.petition-para {
+  width: 55%;
+  padding-right: 10px;
+}
+
+.signature {
+  width: 45%;
+  padding-right: 10px;
+}
+
+/* Dark mode styles */
+.dark-mode {
+  --navbar-bg-light: #333;
+  /* Change light mode navbar background color to dark */
+  --navbar-color-light: #fff;
+}
+
+.dark-mode #theme-button {
+  background: linear-gradient(to right, #000, #fff);
+  /* Change background color in dark mode */
+  color: #fff;
+  /* Change text color in dark mode */
+}
+
+.dark-mode .navbar ul li {
+  color: var(--navbar-color-dark);
+}
+
+.dark-mode .description {
+  transition: background-color color 0.5s;
+  background-color: var(--navbar-bg-dark);
+}
+
+.dark-mode .saving-button {
+  background-color: var(--navbar-bg-dark);
+  color: var(--navbar-color-dark);
+}
+
+.dark-mode .details {
+  transition: background-color color 0.5s;
+  background-color: var(--navbar-bg-dark);
+}
+
+.dark-mode .title {
+  transition: background-color color 0.5s;
+  color: white;
+  /* Change title text color to light */
+}
+
+.dark-mode .content {
+  transition: background-color color 0.5s;
+  color: #fff;
+  /* Change content text color to light */
+}
+
+.dark-mode .container {
+  transition: background-color 0.5s, color 0.5s;
+  color: var(--navbar-color-dark);
+  background-color: var(--navbar-bg-dark);
+  /* Change container background color to dark */
+}
+
+.dark-mode .news {
+  transition: background-color 0.5s, color 0.5s;
+  color: var(--navbar-color-dark);
+  background-color: var(--navbar-bg-dark);
+}
+
+.dark-mode body {
+  transition: background-color 0.5s, color 0.5s;
+  color: var(--navbar-color-dark);
+  background-color: var(--navbar-bg-dark);
+}
+
+
+/* Animation for scrolling */
+@keyframes pushContent {
+  0% {
+    transform: translateY(-100px);
+    /* Initial position */
+  }
+
+  50% {
+    transform: translateY(-50px);
+    /* Move down slightly */
+  }
+
+  100% {
+    transform: translateY(0);
+    /* Return to original position */
+  }
+}
