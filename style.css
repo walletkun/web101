@@ -227,23 +227,36 @@ body {
 }
 
 .image {
+  top: 0;
+  left: 0;
+  opacity: 0;
   transition: opacity 0.5s ease-in-out;
+}
+
+.image.active {
+  opacity: 1;
+  transition: opacity 1s ease-in-out;
 }
 
 .i .image {
   display: none;
-  transition: opacity 0.5s ease-in-out;
+  transition: opacity 1s ease-in-out;
+}
+
+.dot-container {
+  padding-left: 43%;
+  padding-bottom: 30px;
 }
 
 .dot {
   cursor: pointer;
   height: 15px;
   width: 15px;
-  margin-left: 5px;
+  margin-left: 10px;
   background-color: #bbb;
   border-radius: 50%;
   display: inline-flex;
-  transition: background-color 0.6s ease;
+  transition: background-color 0.5s ease;
 }
 
 .active,
@@ -275,15 +288,10 @@ body {
 
 .petition-container {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   gap: 20px;
   width: 100;
   padding-bottom: 50px;
-}
-
-.petition-para {
-  width: 55%;
-  padding-right: 10px;
 }
 
 .signature {

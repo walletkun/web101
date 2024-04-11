@@ -78,7 +78,7 @@ themeButton.addEventListener("click", toggleDarkMode);
 const body = document.body;
 
 window.addEventListener('scroll', function() {
-  if (this.oldScroll > this.scrollY) {
+  if (this.oldScroll > this.oldscrolly) {
     body.style.animation = "pushContent 0.5s ease-out";
   }
 
@@ -89,6 +89,8 @@ window.addEventListener('scroll', function() {
   this.oldScroll = this.oldScrolly;
 });
 
+
+//Slide show 
 let slideIndex = 1;
 showSlides(slideIndex);
 
@@ -110,6 +112,7 @@ function showSlides(n) {
   if (n > slides.length) {
     slideIndex = 1;
   }
+
   if (n < 1) {
     slideIndex = slides.length;
   }
@@ -122,11 +125,6 @@ function showSlides(n) {
   }
 
   slides[slideIndex - 1].style.display = "block";
+  slides[slideIndex - 1].style.opacity = 1;
   dots[slideIndex - 1].classList.add("active");
 }
-
-// Automatically advance slides
-setInterval(function() {
-  plusSlides(1);
-}, 3000); // Change slide every 3 seconds
-
