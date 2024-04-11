@@ -26,7 +26,7 @@
       <ul>
         <li><a href="#" id="home">Home</a></li>
         <li><a href="#" id="video">Video</a></li>
-        <li><a href="#" id="news">Graphs</a></li>
+        <li><a href="#" id="graphs">Graphs</a></li>
         <li><a href="#" id="petition">Support Us</a></li>
         <li><button id="theme-button"><i class="fas fa-moon"></i> Dark Mode</button></li>
       </ul>
@@ -83,7 +83,7 @@
 
 
   <!---News Section -->
-  <div class="news">
+  <div class="news" id="news">
     <h3>
       News Articles that supports our sayings:
     </h3>
@@ -98,7 +98,6 @@
       Below are the graphs of families that are not awared of energy savings:
     </h5>
   </div>
-
   <!-- Slideshow container -->
   <div class="slideshow-container">
 
@@ -124,23 +123,34 @@
 
 
   <!--Petition form--->
-  <div class="petition" id="petition">
-    <h2>Sign Our Petition 📢</h2>
+  <div class="petition" id="petition-form">
+    <!--- Sign Petition Form --->
+    <div class="form">
+      <h2>Fill Out the Form to Keep Everyone Awared</h2>
+      <form id="sign-petition" title="sign-petition">
+        <!--name-->
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name">
+        <!--hometown-->
+        <label for="city">City</label>
+        <input type="text" id="city" name="city">
+        <!--Email-->
+        <label for="email">Email</label>
+        <input type="text" id="email" name="email">
+      </form>
+      <!--- Sign Now Button --->
+      <button id="sign-now-button">Sign Now</button>
+    </div>
+    <!---signatures-->
     <div class="petition-container">
       <div class="signatures">
+        <h2>Record of support:</h2>
+        <p id="total-count">3 people have signed this petiton and support this cause. </p>
         <p>🖊️ Johnny from Brooklyn supports this.</p>
         <p>🖊️ Andy from Queens supports this.</p>
         <p>🖊️ Jacky from Harlem supports this.</p>
       </div>
     </div>
-
-    <!--- Sign Petition Form --->
-    <form id="sign-petition" title="sign-petition">
-      <!-- inputs go here -->
-    </form>
-
-    <!--- Sign Now Button --->
-    <button id="sign-now-button">Sign Now</button>
 
   </div>
 

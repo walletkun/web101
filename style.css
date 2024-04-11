@@ -220,6 +220,7 @@ body {
 }
 
 .slideshow-container {
+  font-family: Graphik, Arial, sans-serif;
   position: relative;
   padding-left: 100px;
   margin: 0 auto;
@@ -281,23 +282,112 @@ body {
 }
 
 .petition {
-  padding-left: 3px;
-  padding-top: 10px;
+  font-family: Graphik, Arial, sans-serif;
+  display: flex;
+  justify-content: space-between;
+  padding-left: 20%;
+  padding-right: 40%;
+  padding-bottom: 5%;
+  padding-top: 5%;
   background-color: #f3f3f3;
+  width: 50%;
 }
 
 .petition-container {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   gap: 20px;
-  width: 100;
-  padding-bottom: 50px;
+  width: 90%;
+  padding-top: 3%;
+  padding-left: 10%;
 }
 
 .signature {
-  width: 45%;
-  padding-right: 10px;
+  align-items: center;
+  animation: slideUp 1s ease-in-out forwards;
 }
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+    /* Move the signature down */
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    /* Move the signature up */
+  }
+}
+
+
+.form {
+  background: transparent;
+  display: flex;
+  flex-direction: column;
+  border-radius: 120px;
+  padding: 100px;
+  background-color: #FFFF;
+}
+
+
+.form h2 {
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+#sign-petition {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  padding-bottom: 40px;
+  /* Add padding to the form */
+
+}
+
+#sign-petition input {
+  padding: 5px;
+  /* Add padding to the input fields */
+  margin-bottom: 10px;
+  /* Adjust margin for better spacing */
+  width: 200px;
+}
+
+input[type="text"] {
+  /* Your existing styles */
+  transition: border-color .3s ease-out;
+  /* Add transition for border-color */
+}
+
+#sign-petition label {
+  margin-bottom: 5px;
+  text-align: center;
+}
+
+#sign-now-button {
+  width: 50%;
+  padding: 10px 20px;
+  margin: 0 auto;
+  font-size: 16px;
+  border: none;
+  border-radius: 20px;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#sign-now-button:hover {
+  background-color: #0056b3
+}
+
+/* #sign-petition label {
+  display: block;
+  text-align: center;
+} */
+
+
 
 /* Dark mode styles */
 .dark-mode {
@@ -362,6 +452,30 @@ body {
   color: var(--navbar-color-dark);
   background-color: var(--navbar-bg-dark);
 }
+
+.dark-mode .petition {
+  transition: background-color 0.5s, color 0.5s;
+  color: #bcb8b8;
+  background-color: #000000;
+}
+
+.dark-mode .form {
+  transition: background-color 0.5s, color 0.5s;
+  color: #fffafa;
+  background-color: #a39f9f;
+}
+
+.dark-mode .form h2 {
+  transition: background-color 0.5s, color 0.5s;
+  color: #fffafa;
+}
+
+.dark-mode #sign-petition {
+  transition: background-color 0.5s, color 0.5s;
+  color: #333;
+  background-color: #f3f3f3 transparent;
+}
+
 
 .dark-mode body {
   transition: background-color 0.5s, color 0.5s;
