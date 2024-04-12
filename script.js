@@ -153,7 +153,7 @@ let totalSignatures = 3;
 const addSignature = (name, city) => {
   const petitionContainer = document.querySelector('.signatures');
   const signature = document.createElement('p');
-  signature.textContent = `🖊️ ${name} from ${city} supports this.`;
+  signature.textContent = `💡 ${name} from ${city} supports this.`;
   signature.classList.add('signature'); // Add the signature class
 
 
