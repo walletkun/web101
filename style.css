@@ -145,6 +145,7 @@ body {
 .details {
   margin-top: 10px;
   margin-bottom: 0;
+  padding-top: 2%;
   padding-bottom: 1em;
   display: block;
   transition: background-color 0.5s, color 0.5s;
@@ -158,6 +159,11 @@ body {
   line-height: 2rem;
   font-weight: 700;
 }
+
+.content {
+  padding-bottom: 5%;
+}
+
 
 .content p {
   flex-direction: column;
@@ -212,6 +218,20 @@ body {
   display: flex;
   flex-direction: column;
   transition: background-color 0.5s, color 0.5s;
+}
+
+#news-section.articles {
+  color: #615c5c;
+  text-decoration: none;
+}
+
+#news-section.articles:hover {
+  color: #c3be2c;
+}
+
+#news-section.articles:active,
+#news-section.articles.clicked {
+  color: #37d2c7;
 }
 
 .news h5 {
