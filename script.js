@@ -88,20 +88,19 @@ themeButton.addEventListener("click", toggleDarkMode);
 
 
 //Animation for webpage when scrolling up and down
-
-const body = document.body;
-let oldScroll = window.pageYOffset;
-
 window.addEventListener('scroll', function() {
-  let newScroll = window.pageYOffset;
+  let scrollPosition = window.scrollY;
+  let windowHeight = window.innerHeight;
 
-  if (newScroll > oldScroll) {
-    body.style.animation = "pushContent 0.5s ease-in-out";
-  } else {
-    body.style.animation = "pushContent 0.5s ease-in-out";
-  }
+  document.querySelectorAll('.animate-on-scroll').forEach(function(element) {
+    let elementPosition = element.offsetTop;
 
-  oldScroll = newScroll;
+    if (scrollPosition > elementPosition - windowHeight * 0.75) {
+      element.classList.add('animate');
+    } else {
+      element.classList.remove('animate');
+    }
+  });
 });
 
 
@@ -165,7 +164,7 @@ const addSignature = (name, city) => {
 
 const updateTotalCount = () => {
   const totalCountElement = document.getElementById('total-count');
-  totalCountElement.textContent = `${totalSignatures} people have signed this petiton and support this cause.`;
+  totalCountElement.textContent = `💡 Counter: ${totalSignatures}`;
 }
 
 const validateForm = () => {
