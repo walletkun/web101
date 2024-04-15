@@ -170,7 +170,6 @@ const updateTotalCount = () => {
 const validateForm = () => {
 
   let containsErrors = false;
-
   var petitionInputs = document.getElementById("sign-petition").elements;
   var name = petitionInputs.name.value.trim();
   var city = petitionInputs.city.value.trim();
@@ -216,3 +215,7 @@ const validateForm = () => {
 const signNowButton = document.getElementById('sign-now-button');
 
 signNowButton.addEventListener('click', validateForm);
+
+
+
+

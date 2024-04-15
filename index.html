@@ -17,7 +17,7 @@
 
 <body>
   <!-- Header Section -->
-  <div class="header-container">
+  <div class="header-container active">
     <div class="logo">
       <img src=".local/Images/energy_saving_nobg.png" class="logo" id="icon">
     </div>
@@ -34,7 +34,7 @@
   </div>
 
   <!-- Description Section -->
-  <div class="description">
+  <div class="description revealable">
     <div class="description-text">
       <p>Saving Energy</p>
       <p>equals</p>
@@ -68,22 +68,22 @@
     </div>
   </div>
 
-  <div class="container">
+  <div class="container revealable">
     <h6>
       Energy Saving Tips
     </h6>
     <h4>
       7 Ways to Save Energy
     </h4>
+  </div>
+  <div class="video-container revealable">
     <iframe class="video" id="video-section" src="https://www.youtube.com/embed/2Y0PrfVvkX0" frameborder="0"
-      allowfullscreen>
+      allowfullscreen="true">
     </iframe>
   </div>
 
-
-
   <!---News Section -->
-  <div class="news" id="news">
+  <div class="news revealable" id="news">
     <h3>
       News Articles that supports our sayings:
     </h3>
@@ -99,7 +99,7 @@
     </h5>
   </div>
   <!-- Slideshow container -->
-  <div class="slideshow-container">
+  <div class="slideshow-container revealable">
 
     <!-- Full-width images with number and caption text -->
     <div class="image">
@@ -123,10 +123,10 @@
 
 
   <!--Petition form--->
-  <div class="petition" id="petition-form">
+  <div class="petition revealable" id="petition-form">
 
     <!--- Sign Petition Form --->
-    <div class="form">
+    <div class="form revealable">
       <h2>Fill Out the Form to Keep Everyone Aware</h2>
       <form id="sign-petition" title="sign-petition">
         <!--name-->
@@ -143,7 +143,7 @@
       <button id="sign-now-button">Sign Now</button>
     </div>
 
-    <div class="action-para">
+    <div class="action-para revealable">
       <h2>Join the Energy Saving Revolution Today</h2>
       <p>Join the movement towards a more sustainable future by taking action today to save energy. Every small change
         we make collectively adds up to significant impact. Simple steps like turning off lights when not in use,
@@ -153,7 +153,7 @@
     </div>
 
     <!---signatures-->
-    <div class="petition-container">
+    <div class="petition-container revealable">
       <div class="signatures">
         <h2>Support Honor roll:</h2>
         <p id="total-count">💡 Counter: 3</p>

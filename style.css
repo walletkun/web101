@@ -21,8 +21,6 @@ body {
 }
 
 
-/* Part 1: Navbar */
-
 /* General style rule set for all items in ul */
 .navbar ul {
   list-style: none;
@@ -181,7 +179,6 @@ body {
   overflow-wrap: break-word;
 }
 
-
 .container {
   display: flex;
   flex-direction: column;
@@ -204,6 +201,13 @@ body {
   font-family: Graphik, Arial, sans-serif;
   font-size: 1.5rem;
   font-weight: 700;
+}
+
+
+.video-container {
+  padding-bottom: 20px;
+  transition: background-color 0.5s, color 0.5s;
+  background-color: #f3f3f3;
 }
 
 .video {
@@ -293,7 +297,7 @@ body {
   display: flex;
   justify-content: space-between;
   max-width: 100%;
-  padding-left: 28%;
+  padding-left: 10%;
   padding-bottom: 5%;
   padding-top: 5%;
   background-color: #f3f3f3;
@@ -307,7 +311,6 @@ body {
   border-radius: 120px;
   padding: 100px;
   background-color: #FFFF;
-  margin-left: -25%;
 }
 
 
@@ -327,9 +330,9 @@ body {
 }
 
 #sign-petition input {
-  padding: 5px;
+  padding: 2px;
   /* Add padding to the input fields */
-  margin-bottom: 10px;
+  margin-bottom: 10%;
   /* Adjust margin for better spacing */
   width: 200px;
 }
@@ -365,6 +368,7 @@ input[type="text"] {
 .action-para {
   width: 80%;
   margin-left: 4%;
+  padding-left: 3%;
   padding-right: 2%;
 }
 
@@ -403,9 +407,6 @@ input[type="text"] {
     /* Move the signature up */
   }
 }
-
-
-
 
 
 
@@ -461,6 +462,12 @@ input[type="text"] {
   /* Change container background color to dark */
 }
 
+.dark-mode .video-container {
+  transition: background-color 0.5s, color 0.5s;
+  background-color: var(--navbar-bg-dark);
+  /* Change container background color to dark */
+}
+
 .dark-mode .news {
   transition: background-color 0.5s, color 0.5s;
   color: var(--navbar-color-dark);
@@ -501,23 +508,4 @@ input[type="text"] {
   transition: background-color 0.5s, color 0.5s;
   color: var(--navbar-color-dark);
   background-color: var(--navbar-bg-dark);
-}
-
-
-/* Animation for scrolling */
-@keyframes pushContent {
-  0% {
-    transform: translateY(-100px);
-    /* Initial position */
-  }
-
-  50% {
-    transform: translateY(-50px);
-    /* Move down slightly */
-  }
-
-  100% {
-    transform: translateY(0);
-    /* Return to original position */
-  }
 }
