@@ -1,7 +1,7 @@
 :root {
-  --navbar-bg-light: #E8E8E8;
+  --navbar-bg-light: #aca5a5;
   /* Light mode navbar background color */
-  --navbar-color-light: #000;
+  --navbar-color-light: #f5f0f0;
   /* Light mode navbar text color */
   --navbar-bg-dark: #000;
   /* Dark mode navbar background color */
@@ -11,7 +11,6 @@
 
 
 body {
-  transition: all 1s ease-in-out;
   transform: none;
   height: 100%;
   width: 100%;
@@ -20,6 +19,33 @@ body {
   background-color: #FFFF;
 }
 
+/*Animation */
+.revealable {
+  position: relative;
+  transform: translateY(150px);
+  opacity: 0;
+  transition: all 0.5s ease;
+}
+
+.active {
+  transform: translateY(0px);
+  opacity: 1;
+}
+
+.header-container {
+  background-color: #595959;
+  color: #000000;
+  height: 50px;
+  padding-bottom: 10px;
+  display: flex;
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  position: sticky;
+  z-index: 1000;
+  top: 0;
+  transition: background-color 0.5s, color 0.5s;
+}
 
 /* General style rule set for all items in ul */
 .navbar ul {
@@ -33,7 +59,6 @@ body {
 /* Style rule set for individual li */
 .navbar ul li {
   margin: 10px;
-  /* Adjust margin between list items */
 }
 
 
@@ -67,27 +92,11 @@ body {
   padding-bottom: 2em;
   margin-bottom: 10px;
   margin-right: 5px;
-  /* Adjust icon spacing */
 }
 
 #theme-button:active {
   transform: translateY(2px);
   /* Apply a slight downward movement when button is pressed */
-}
-
-.header-container {
-  background-color: var(--navbar-bg-light);
-  color: var(--navbar-bg-dark);
-  height: 50px;
-  padding-bottom: 10px;
-  display: flex;
-  width: 100%;
-  max-width: 100%;
-  margin: 0;
-  position: sticky;
-  z-index: 1000;
-  top: 0;
-  transition: background-color 0.5s, color 0.5s;
 }
 
 .logo {
@@ -257,12 +266,11 @@ body {
   top: 0;
   left: 0;
   opacity: 0;
-  transition: opacity 0.5s ease-in-out;
+  transition: opacity 1s ease-in-out;
 }
 
 .image.active {
   opacity: 1;
-  transition: opacity 1s ease-in-out;
 }
 
 .i .image {
@@ -286,7 +294,6 @@ body {
   transition: background-color 0.5s ease;
 }
 
-.active,
 .dot:hover {
   background-color: #717171;
 }
@@ -294,6 +301,7 @@ body {
 
 .petition {
   font-family: Graphik, Arial, sans-serif;
+  transition: background-color 0.5s, color 0.5s;
   display: flex;
   justify-content: space-between;
   max-width: 100%;
@@ -321,6 +329,7 @@ body {
 
 
 #sign-petition {
+  transition: background-color 0.5s;
   display: flex;
   flex-direction: column;
   padding: 10px;
@@ -365,6 +374,23 @@ input[type="text"] {
   background-color: #0056b3
 }
 
+.signature {
+  opacity: 0;
+  animation: slideUp 1s ease-in-out forwards;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .action-para {
   width: 80%;
   margin-left: 4%;
@@ -390,26 +416,6 @@ input[type="text"] {
   gap: 20px;
 }
 
-.signature {
-  animation: slideUp 1s ease-in-out forwards;
-}
-
-@keyframes slideUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-    /* Move the signature down */
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
-    /* Move the signature up */
-  }
-}
-
-
-
 /* Dark mode styles */
 .dark-mode {
   --navbar-bg-light: #333;
@@ -425,7 +431,7 @@ input[type="text"] {
 }
 
 .dark-mode .navbar ul li {
-  color: var(--navbar-color-dark);
+  color: #000;
 }
 
 .dark-mode .description {
@@ -456,56 +462,49 @@ input[type="text"] {
 }
 
 .dark-mode .container {
-  transition: background-color 0.5s, color 0.5s;
+  transition: background-color color 0.5s;
   color: var(--navbar-color-dark);
   background-color: var(--navbar-bg-dark);
   /* Change container background color to dark */
 }
 
 .dark-mode .video-container {
-  transition: background-color 0.5s, color 0.5s;
+  transition: background-color color 0.5s;
   background-color: var(--navbar-bg-dark);
   /* Change container background color to dark */
 }
 
 .dark-mode .news {
-  transition: background-color 0.5s, color 0.5s;
+  transition: background-color color 0.5s;
   color: var(--navbar-color-dark);
   background-color: var(--navbar-bg-dark);
 }
 
 .dark-mode .slideshow-container {
-  transition: background-color 0.5s, color 0.5s;
+  transition: background-color color 0.5s;
   color: var(--navbar-color-dark);
   background-color: var(--navbar-bg-dark);
 }
 
 .dark-mode .petition {
-  transition: background-color 0.5s, color 0.5s;
+  transition: background-color color 0.5s;
   color: #bcb8b8;
   background-color: #000000;
 }
 
 .dark-mode .form {
-  transition: background-color 0.5s, color 0.5s;
+  transition: background-color color 0.5s;
   color: #fffafa;
   background-color: #a39f9f;
 }
 
 .dark-mode .form h2 {
-  transition: background-color 0.5s, color 0.5s;
+  transition: background-color color 0.5s;
   color: #fffafa;
 }
 
 .dark-mode #sign-petition {
-  transition: background-color 0.5s, color 0.5s;
+  transition: background-color color 0.5s;
   color: #f5f5f5;
   background-color: #f3f3f3 transparent;
-}
-
-
-.dark-mode body {
-  transition: background-color 0.5s, color 0.5s;
-  color: var(--navbar-color-dark);
-  background-color: var(--navbar-bg-dark);
 }

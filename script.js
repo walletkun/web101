@@ -87,23 +87,6 @@ const toggleDarkMode = () => {
 themeButton.addEventListener("click", toggleDarkMode);
 
 
-//Animation for webpage when scrolling up and down
-window.addEventListener('scroll', function() {
-  let scrollPosition = window.scrollY;
-  let windowHeight = window.innerHeight;
-
-  document.querySelectorAll('.animate-on-scroll').forEach(function(element) {
-    let elementPosition = element.offsetTop;
-
-    if (scrollPosition > elementPosition - windowHeight * 0.75) {
-      element.classList.add('animate');
-    } else {
-      element.classList.remove('animate');
-    }
-  });
-});
-
-
 //Slide show 
 let slideIndex = 1;
 showSlides(slideIndex);
@@ -153,7 +136,8 @@ const addSignature = (name, city) => {
   const petitionContainer = document.querySelector('.signatures');
   const signature = document.createElement('p');
   signature.textContent = `💡 ${name} from ${city} supports this.`;
-  signature.classList.add('signature'); // Add the signature class
+  signature.classList.add('signature');
+  // Add to the signature class
 
 
   petitionContainer.appendChild(signature);
@@ -217,5 +201,34 @@ const signNowButton = document.getElementById('sign-now-button');
 signNowButton.addEventListener('click', validateForm);
 
 
+let animation = {
+  revealDistance: 150,
+  initialOpacity: 0,
+  transitionDelay: 0,
+  transitionDuration: '2s',
+  transitionProperty: 'all',
+  transitionTimingFunction: 'ease'
+}
 
+const revealableContainers = document.querySelectorAll('.revealable');
+
+function reveal() {
+  let windowHeight = window.innerHeight;
+  for (let i = 0; i < revealableContainers.length; i++) {
+    let topOfRevealableContainer = revealableContainers[i].getBoundingClientRect().top;
+
+    if (topOfRevealableContainer < windowHeight - animation.revealDistance) {
+      revealableContainers[i].classList.add('active');
+    }
+    else {
+      revealableContainers[i].classList.remove('active');
+    }
+  }
+}
+
+// Call the reveal function when the page is scrolled
+window.addEventListener('scroll', reveal);
+
+//Call the reveal function initially reveal any elements
+reveal();
 
