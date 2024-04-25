@@ -27,8 +27,8 @@ body {
   transition: all 0.5s ease;
 }
 
-.active {
-  transform: translateY(0px);
+.revealable.active {
+  transform: translateY(0);
   opacity: 1;
 }
 
@@ -225,7 +225,6 @@ body {
   width: 70%;
   height: 40em;
 }
-
 
 .news {
   font-family: Graphik, Arial, sans-serif;
@@ -428,7 +427,7 @@ input[type="text"] {
   background-color: rgba(1, 0.5, 0.5, 0.5);
   z-index: 999;
   opacity: 0;
-  transition: opacity 0.4s ease-in;
+  transition: opacity .5s ease-in;
 }
 
 .modal-content {
@@ -452,7 +451,7 @@ input[type="text"] {
   height: auto;
   max-height: 80%;
   opacity: 0;
-  transition: opacity 0.4s ease-in;
+  transition: opacity .5s ease-in;
 }
 
 #modal-text-container {
@@ -472,6 +471,24 @@ input[type="text"] {
   right: 20px;
   cursor: pointer;
   color: #a7a5a5;
+}
+
+@keyframes moveImage {
+  0% {
+    transform: translateX(0px);
+  }
+
+  50% {
+    transform: translateX(50px);
+  }
+
+  100% {
+    transform: translateX(-50px);
+  }
+}
+
+#modal-image {
+  animation: moveImage 4s infinite;
 }
 
 

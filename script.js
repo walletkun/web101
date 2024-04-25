@@ -240,6 +240,7 @@ const toggleModal = (name) => {
   var modal = document.getElementById("thanks-modal");
   var modalContent = document.getElementById("modal-text-container");
   var modalText = document.createElement("p");
+  // var intervalId = setInterval(scaleImage, 500);
 
   modalText.textContent = `Thank you, ${name}, you are now part of the energy saving family!`;
   modalContent.appendChild(modalText);
@@ -254,6 +255,7 @@ const toggleModal = (name) => {
 
   var closeModal = document.getElementById("close-modal");
   closeModal.addEventListener("click", () => {
+    // clearInterval(intervalId);
     modalOverlay.style.display = "none";
     modal.style.display = "none";
     modalContent.removeChild(modalText);
@@ -261,9 +263,19 @@ const toggleModal = (name) => {
 
 
   setTimeout(() => {
+    // clearInterval(intervalId);
     modalOverlay.style.display = "none";
     modal.style.display = "none";
     modalContent.removeChild(modalText);
   }, 4000);
 
 }
+
+
+// var scaleFactor = 1;
+// var modalImage = document.getElementById("modal-image");
+
+// function scaleImage() {
+//   scaleFactor = scaleFactor === 1 ? 0.8 : 1;
+//   modalImage.style.transform = `scale(${scaleFactor})`;
+// }
