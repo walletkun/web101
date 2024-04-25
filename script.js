@@ -159,6 +159,7 @@ const validateForm = () => {
   var city = petitionInputs.city.value.trim();
   var email = petitionInputs.email.value.trim();
 
+
   //Uses regex to make sure that email pattern is valid
   const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
@@ -185,15 +186,16 @@ const validateForm = () => {
     containsErrors = true;
   }
 
-  if (containsErrors) {
-    // Stop form submission if there are empty fields
+  if (!containsErrors) {
+    addSignature(name, city);
+    petitionInputs.name.value = '';
+    petitionInputs.city.value = '';
+    petitionInputs.email.value = '';
+    toggleModal(name); // Call toggleModal if no errors
+  } else {
     return;
   }
 
-  addSignature(name, city);
-  petitionInputs.name.value = '';
-  petitionInputs.city.value = '';
-  petitionInputs.email.value = '';
 }
 
 const signNowButton = document.getElementById('sign-now-button');
@@ -232,3 +234,36 @@ window.addEventListener('scroll', reveal);
 //Call the reveal function initially reveal any elements
 reveal();
 
+
+const toggleModal = (name) => {
+  var modalOverlay = document.getElementById("modal-overlay");
+  var modal = document.getElementById("thanks-modal");
+  var modalContent = document.getElementById("modal-text-container");
+  var modalText = document.createElement("p");
+
+  modalText.textContent = `Thank you, ${name}, you are now part of the energy saving family!`;
+  modalContent.appendChild(modalText);
+
+  modalOverlay.style.display = "block";
+  modal.style.display = "block";
+  void modalOverlay.offsetWidth;
+  void modal.offsetWidth;
+
+  modalOverlay.style.opacity = "1";
+  modal.style.opacity = "1";
+
+  var closeModal = document.getElementById("close-modal");
+  closeModal.addEventListener("click", () => {
+    modalOverlay.style.display = "none";
+    modal.style.display = "none";
+    modalContent.removeChild(modalText);
+  });
+
+
+  setTimeout(() => {
+    modalOverlay.style.display = "none";
+    modal.style.display = "none";
+    modalContent.removeChild(modalText);
+  }, 4000);
+
+}

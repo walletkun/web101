@@ -112,7 +112,7 @@ body {
   padding-bottom: 8em;
   margin-bottom: -1em;
   background-image: url(".local/Images/background_energy.jpg");
-  background-size: 120rem 120%;
+  background-size: 120rem 200%;
   background-repeat: no-repeat;
   position: relative;
 }
@@ -415,6 +415,65 @@ input[type="text"] {
   padding-right: 5%;
   gap: 20px;
 }
+
+/*Modal*/
+
+#modal-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(1, 0.5, 0.5, 0.5);
+  z-index: 999;
+  opacity: 0;
+  transition: opacity 0.4s ease-in;
+}
+
+.modal-content {
+  text-align: center;
+}
+
+
+#thanks-modal {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: transparent;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(1, 1, 1, 1);
+  z-index: 1000;
+  width: 30%;
+  max-width: calc(100% - 40px);
+  height: auto;
+  max-height: 80%;
+  opacity: 0;
+  transition: opacity 0.4s ease-in;
+}
+
+#modal-text-container {
+  text-align: center;
+}
+
+#modal-text-container p {
+  font-size: 18px;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+/* Close button style */
+#close-modal {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  cursor: pointer;
+  color: #a7a5a5;
+}
+
 
 /* Dark mode styles */
 .dark-mode {
